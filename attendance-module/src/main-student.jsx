@@ -5,6 +5,7 @@ import { UserSquare2 } from 'lucide-react';
 import { StudentPanel } from './components/StudentPanel';
 import { SessionProvider } from './context/SessionContext';
 import { CONFIG } from './config';
+import './index.css';
 
 const StudentApp = () => (
     <SessionProvider>

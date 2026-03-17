@@ -1,0 +1,55 @@
+{
+  "name": "attendance-module",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"nodemon --watch ../server ../server/server.js\" \"vite --config vite.config.teacher.js\" \"vite --config vite.config.student.js\"",
+    "dev:teacher": "vite --config vite.config.teacher.js",
+    "dev:student": "vite --config vite.config.student.js",
+    "dev:all": "concurrently --kill-others-on-fail \"nodemon --watch ../server ../server/server.js\" \"vite --config vite.config.teacher.js\" \"vite --config vite.config.student.js\"",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "node ../server/server.js",
+    "kill-ports": "npx kill-port 5000 5174 5175"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "lucide-react": "^0.575.0",
+    "motion": "^12.34.3",
+    "pg": "^8.19.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^6.30.3",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "nodemon": "^3.1.14",
+    "vite": "^7.3.1"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richardgogoi11/attendence.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Richardgogoi11/attendence/issues"
+  },
+  "homepage": "https://github.com/Richardgogoi11/attendence#readme"
+}

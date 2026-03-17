@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import { UserSquare2 } from 'lucide-react';
 import { StudentPanel } from './components/StudentPanel';
 import { SessionProvider } from './context/SessionContext';
-import './index.css';
+import { CONFIG } from './config';
 
 const StudentApp = () => (
     <SessionProvider>
@@ -28,8 +28,8 @@ const StudentApp = () => (
                     </motion.h1>
                 </div>
                 <StudentPanel
-                    allowedRadius={50000}
-                    targetLocation={{ latitude: 37.7749, longitude: -122.4194 }}
+                    allowedRadius={CONFIG.ALLOWED_RADIUS}
+                    targetLocation={CONFIG.TARGET_LOCATION}
                 />
             </div>
         </div>

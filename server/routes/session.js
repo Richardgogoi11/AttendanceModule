@@ -95,4 +95,7 @@ router.post('/verify', (req, res) => {
   return res.status(400).json({ valid: false, error: 'Incorrect OTP.' });
 });
 
-module.exports = router;
+module.exports = {
+  router,
+  activeSession
+};
